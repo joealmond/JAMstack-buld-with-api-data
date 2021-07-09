@@ -1,10 +1,16 @@
 ---
 title: A page for you
 layout: base.njk
----    
+---
 
 <div class="container"></div>
 <h1>Ez egy weboldal neked</h1>
-<div class="vibe">Szervusz </div>
+<div class="vibe">Szervusz</div>
 <div class="love">❤️</div>
+    <ul>
+    {% for article in news.articles %}
+        <li>{{ article.title }}</li>
+    {% endfor %}
+
+    </ul>
 <script src="/js/vibe.js"></script>
